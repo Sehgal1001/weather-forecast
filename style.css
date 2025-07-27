@@ -1,0 +1,99 @@
+body.light {
+  background: #e9f5ff;
+  color: #000;
+}
+
+body.dark {
+  background: #121212;
+  color: #f0f0f0;
+}
+
+.dark .card {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  border-color: #444;
+}
+
+.card {
+  margin-top: 20px;
+}
+
+footer {
+  margin-top: 50px;
+}
+
+input, .btn {
+  font-weight: 500;
+}
+
+.navbar {
+  border-bottom: 1px solid #ddd;
+}
+
+.dark .navbar, .dark footer {
+  background-color: #1e1e1e !important;
+  color: #fff;
+}
+
+.spinner-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  text-align: center;
+}
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.6;
+  transition: opacity 0.5s ease-in-out;
+}
+#suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+}
+
+#suggestions li {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+#suggestions li:hover {
+  background-color: #f0f0f0;
+}
+#suggestions li.active {
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+/* Dark theme */
+body.dark #suggestions .list-group-item {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+/* For dark mode suggestions */
+body.dark .suggestion-item {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark .suggestion-item.active,
+body.dark .suggestion-item:hover {
+  background-color: #555;
+}
